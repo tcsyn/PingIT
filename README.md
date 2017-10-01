@@ -1,2 +1,2 @@
 # PingIT
-I hate sky
+You know it. 
