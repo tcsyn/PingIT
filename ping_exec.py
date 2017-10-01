@@ -11,12 +11,8 @@ while True:
 
         status = int(output.returncode)
 
+        print status
+
         time.sleep(1)
 
-        out = hostcheck(tgts)
-
-    out = 0
-
-    while out == 0:
-        out += 1
-        print out
+    hostcheck = hostcheck(tgts)
