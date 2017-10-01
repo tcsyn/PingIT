@@ -7,16 +7,18 @@ import cPickle as pickle
 
 #global vars
 
-tgts = "news.bbc.co.uk"
+tgts = "newss.bbc.co.uk"
 timenow = time.strftime('%d/%m/%y %H:%M:%S')
 
 def main():
+
+
     def hostcheck(target):
+
         output = subprocess.Popen(['ping', '-c', '1', '{}'.format(target)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = output.communicate()
 
         status = output.returncode
-        print status
 
         def hoststatus(x):
             # Store the current value as object and load value and set as lastv
@@ -24,8 +26,11 @@ def main():
             pickle.dump(timenow, f)
             pickle.dump(x, f)
             f.close()
+            print x
+
         hoststatus(status)
+
     hostcheck(tgts)
 
-
 main()
+
