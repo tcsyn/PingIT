@@ -21,6 +21,7 @@ def main():
         def hoststatus(x):
             # Store the current value as object and load value and set as lastv
             f = file('/Users/chris/status', 'wb')
+            pickle.dump(timenow, f)
             pickle.dump(x, f)
             f.close()
         hoststatus(status)
