@@ -7,7 +7,7 @@ import cPickle as pickle
 
 #global vars
 
-tgts = "newss.bbc.co.uk"
+tgts = "news.bbc.co.uk"
 timenow = time.strftime('%d/%m/%y %H:%M:%S')
 
 def main():
